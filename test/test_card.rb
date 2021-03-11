@@ -4,14 +4,7 @@ require 'una'
 class CardTest < Minitest::Test
   def setup
     @card = Una::Card.new()
-    @card_with_valid_params = Una::Card.new(color: "green", number: 4)
-    @card_with_invalid_params = Una::Card.new(number: 2, type: "+2")
-  end
-
-  def test_cards_print_properly
-    p @card
-    p @card_with_valid_params
-    p @card_with_invalid_params
+    @card_with_valid_params = Una::Card.new(color: "green", number: 4, type: "number")
   end
   
   def test_check_for_valid_color

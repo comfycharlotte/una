@@ -33,11 +33,16 @@ class Una::Card
       unless @@valid_types.include?(params[:type])
         raise ArgumentError.new("Not a valid type")
       end
-      
+
+      if params[:type] != nil && params[:number] != nil && params[:type] != "number"
+        raise ArgumentError.new("Card cannot possess a non-number type while a number attribute is present")
+      end
+
       if params[:number].class == Integer
         @type = "number"
       end
     else
+      # check if 
       if @number != nil && @number.class == Integer
         @type = "number"
       else
