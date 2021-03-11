@@ -1,0 +1,5 @@
+# emacs files
+*~
+
+# ruby files
+Gemfile.lock

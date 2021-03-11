@@ -1,0 +1,3 @@
+class Una::Card
+
+end
