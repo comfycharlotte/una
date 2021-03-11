@@ -11,11 +11,11 @@ class CardTest < Minitest::Test
     assert_includes(["blue", "green", "red", "yellow"], @card.color) 
   end
 
-  def test_check_for_valid_value
+  def test_check_for_valid_number
     assert_includes(0..9, @card.number)
   end
 
-  def test_check_for_valid_value_type_pairing
+  def test_check_for_valid_number_type_pairing
     if @card.number != nil && @card.class == Integer
       assert_equal(@card.type, "number")
     end
